@@ -3,7 +3,11 @@
 export default {
   content: ['./src/**/*.tsx', './src/**/*.ts'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'blue': '#011732',
+      },
+    },
   },
   plugins: [],
 };
