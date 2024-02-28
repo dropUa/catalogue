@@ -27,11 +27,11 @@ export const Header: React.FC<Props> = React.memo(({ title, price, sizes }) => {
       )}
 
       {Array.isArray(sizes) ? (
-        <div className="col-start-2 row-span-1 row-start-1">
+        <div className="col-start-2 row-span-1 row-start-1 flex flex-col gap-6">
           {sizes.map((size, index) => (
             <p
               key={`${size}/${index}`}
-              className={`${classNames.textClassName} text-right`}
+              className={`${classNames.textClassName} text-right block`}
             >
               {size}
             </p>
