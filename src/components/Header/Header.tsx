@@ -4,7 +4,7 @@ import { Container } from '../../ui/Container/Container';
 type Props = {
   title: string;
   price?: string;
-  sizes: string | string[];
+  sizes: string[];
 };
 
 const classNames = {
@@ -13,7 +13,7 @@ const classNames = {
 
 export const Header: React.FC<Props> = React.memo(({ title, price, sizes }) => {
   return (
-    <Container className="sticky top-0 grid grid-cols-2 grid-rows-2 sm:flex sm:justify-between bg-blue items-center py-4 gap-y-4">
+    <Container className="sticky top-0 grid grid-cols-2 grid-rows-2 sm:flex sm:justify-between z-10 bg-blue items-center py-4 gap-y-4">
       <h2 className={`${classNames.textClassName} col-span-1 row-span-1`}>
         {title}
       </h2>
@@ -26,24 +26,16 @@ export const Header: React.FC<Props> = React.memo(({ title, price, sizes }) => {
         </div>
       )}
 
-      {Array.isArray(sizes) ? (
-        <div className="col-start-2 row-span-1 row-start-1 flex flex-col gap-6">
-          {sizes.map((size, index) => (
-            <p
-              key={`${size}/${index}`}
-              className={`${classNames.textClassName} text-right block`}
-            >
-              {size}
-            </p>
-          ))}
-        </div>
-      ) : (
-        <p
-          className={`${classNames.textClassName} col-start-2 row-span-1 row-start-1 text-right`}
-        >
-          {sizes}
-        </p>
-      )}
+      <div className="col-start-2 row-span-1 row-start-1 flex flex-col gap-6">
+        {sizes.map((size, index) => (
+          <p
+            key={`${size}/${index}`}
+            className={`${classNames.textClassName} text-right block`}
+          >
+            {size}
+          </p>
+        ))}
+      </div>
     </Container>
   );
 });
