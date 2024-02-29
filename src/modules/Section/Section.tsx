@@ -8,10 +8,10 @@ import { ItemList } from '../../components/ItemList/ItemList';
 type Props = {
   title: string;
   sizes: string[];
-  items: ItemType[];
-  price?: number;
+  price: number;
   sale?: number;
   date?: string;
+  items: ItemType[];
 };
 
 export const Section: React.FC<Props> = React.memo(

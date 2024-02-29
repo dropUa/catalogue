@@ -5,7 +5,7 @@ import { Price } from '../Price/Price';
 type Props = {
   title: string;
   sizes: string[];
-  price?: number;
+  price: number;
   sale?: number;
   date?: string;
 };
@@ -18,11 +18,11 @@ export const Header: React.FC<Props> = React.memo(
   ({ title, price, sale, date, sizes }) => {
     return (
       <Container className="sticky top-0 grid grid-cols-2 grid-rows-2 sm:flex sm:justify-between z-10 bg-blue items-center py-4 gap-y-2">
-        <h2 className={`${classNames.textClassName} col-span-1 row-span-1`}>
+        <h2 className={`${classNames.textClassName} col-span-1 row-span-1 uppercase`}>
           {title}
         </h2>
 
-        {!date && !sale && !price ? (
+        {!date && !sale ? (
           <Price price={price as number} />
         ) : (
           <Price price={price as number} sale={sale} date={date} />
