@@ -3,7 +3,7 @@ import { Container } from '../../ui/Container/Container';
 
 type Props = {
   title: string;
-  price?: string;
+  price?: number;
   sizes: string[];
 };
 
@@ -21,7 +21,7 @@ export const Header: React.FC<Props> = React.memo(({ title, price, sizes }) => {
       {price && (
         <div className="text-white col-span-2 text-center flex justify-center">
           <p className="w-fit bg-white text-red-600 font-bold text-4xl p-2 lg:text-6xl">
-            {price}
+            {price} грн
           </p>
         </div>
       )}
