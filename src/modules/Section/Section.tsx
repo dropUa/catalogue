@@ -7,16 +7,24 @@ import { ItemList } from '../../components/ItemList/ItemList';
 
 type Props = {
   title: string;
-  price: number;
   sizes: string[];
   items: ItemType[];
+  price?: number;
+  sale?: number;
+  date?: string;
 };
 
 export const Section: React.FC<Props> = React.memo(
-  ({ title, price, sizes, items }) => {
+  ({ title, price, sizes, items, sale, date }) => {
     return (
       <section className="mb-20">
-        <Header title={title} price={price} sizes={sizes} />
+        <Header
+          title={title}
+          price={price}
+          sizes={sizes}
+          sale={sale}
+          date={date}
+        />
 
         <ItemList items={items} />
       </section>

@@ -15,6 +15,8 @@ export const HomePage: React.FC = React.memo(() => {
         price={109}
         sizes={['700х700х4 мм']}
         items={odnotonni4mm}
+        sale={25}
+        date="До 30.01.23"
       />
 
       <Section
