@@ -13,7 +13,7 @@ const classNames = {
 
 export const Header: React.FC<Props> = React.memo(({ title, price, sizes }) => {
   return (
-    <Container className="sticky top-0 grid grid-cols-2 grid-rows-2 sm:flex sm:justify-between z-10 bg-blue items-center py-4 gap-y-4">
+    <Container className="sticky top-0 grid grid-cols-2 grid-rows-2 sm:flex sm:justify-between z-10 bg-blue items-center py-4 gap-y-2">
       <h2 className={`${classNames.textClassName} col-span-1 row-span-1`}>
         {title}
       </h2>

@@ -9,7 +9,7 @@ type Props = {
 
 export const ItemList: React.FC<Props> = React.memo(({ items }) => {
   return (
-    <Container className="grid gap-3 mt-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center">
+    <Container className="grid gap-3 mt-5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center">
       {items.map((item) => (
         <Item item={item} key={item.vendorCode} />
       ))}
