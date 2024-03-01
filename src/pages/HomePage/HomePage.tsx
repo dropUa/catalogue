@@ -10,6 +10,7 @@ export const HomePage: React.FC = React.memo(() => {
   const odnotonni7mm = getFilteredGoods(items.products, [137]);
   const deko = getFilteredGoods(items.products, [119]);
   const mixed = getFilteredGoods(items.products, [139, 128]);
+  const marmur = getFilteredGoods(items.products, [1]);
 
   const sections = [
     {
@@ -49,6 +50,14 @@ export const HomePage: React.FC = React.memo(() => {
       price: 139,
       sizes: ['700х770х5 мм', '700х700х5 мм', '690x690x4 мм'],
       items: mixed,
+      sale: null,
+      date: null,
+    },
+    {
+      title: 'Мармур',
+      price: 139,
+      sizes: ['700х770х5 мм'],
+      items: marmur,
       sale: null,
       date: null,
     },
