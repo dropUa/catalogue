@@ -74,7 +74,7 @@ export const HomePage: React.FC = React.memo(() => {
     {
       title: 'СТЕЛЬОВІ / ДЕКОР +',
       price: 149,
-      sizes: ['700х700х5 мм'],
+      sizes: ['700х700'],
       items: steloviDekor,
       sale: null,
       date: null,
