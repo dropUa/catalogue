@@ -17,6 +17,23 @@ export const HomePage: React.FC = React.memo(() => {
   const steloviDekor = getFilteredGoods(items.products, [2]);
   const plintusy = getFilteredGoods(items.products, [145]);
   const plivka = getFilteredGoods(items.products, [398, 598]);
+  const dzerkala = getFilteredGoods(items.products, [89, 338]);
+
+  // console.log(
+  //   odnotonni4mm.length +
+  //     odnotonni5mm.length +
+  //     odnotonni7mm.length +
+  //     deko.length +
+  //     mixed.length +
+  //     marmur.length +
+  //     kamin.length +
+  //     dekor.length +
+  //     derevo.length +
+  //     steloviDekor.length +
+  //     plintusy.length +
+  //     plivka.length +
+  //     dzerkala.length
+  // );
 
   const sections = [
     {
@@ -115,9 +132,17 @@ export const HomePage: React.FC = React.memo(() => {
       sale: null,
       date: null,
     },
+    {
+      title: 'Дзеркала',
+      price: '89, 338' as unknown as number,
+      sizes: ['265х265х2 мм', '400x600x2 мм'],
+      items: dzerkala,
+      sale: null,
+      date: null,
+    },
   ];
 
-  return sections.map((section) => {
+  return sections.map((section, index) => {
     const { title, price, sizes, items, sale, date } = section;
 
     return sale && date ? (
@@ -128,9 +153,16 @@ export const HomePage: React.FC = React.memo(() => {
         items={items}
         sale={sale}
         date={date}
+        key={`${title}/${index}`}
       />
     ) : (
-      <Section title={title} price={price} sizes={sizes} items={items} />
+      <Section
+        key={`${title}/${index}`}
+        title={title}
+        price={price}
+        sizes={sizes}
+        items={items}
+      />
     );
   });
 });
