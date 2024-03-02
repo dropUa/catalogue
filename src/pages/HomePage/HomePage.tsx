@@ -16,6 +16,7 @@ export const HomePage: React.FC = React.memo(() => {
   const derevo = getFilteredGoods(items.products, [149, 141]);
   const steloviDekor = getFilteredGoods(items.products, [2]);
   const plintusy = getFilteredGoods(items.products, [145]);
+  const plivka = getFilteredGoods(items.products, [398, 598]);
 
   const sections = [
     {
@@ -103,6 +104,14 @@ export const HomePage: React.FC = React.memo(() => {
       price: 139,
       sizes: ['2.4 м х 9 см'],
       items: plintusy,
+      sale: null,
+      date: null,
+    },
+    {
+      title: 'Самоклеюча плівка / фольга',
+      price: 139,
+      sizes: ['0.6 * 10 м'],
+      items: plivka,
       sale: null,
       date: null,
     },
