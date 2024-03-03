@@ -8,7 +8,7 @@ type Props = {
 
 export const Price: React.FC<Props> = React.memo(({ price, sale, date }) => {
   return (
-    <div className="text-white col-span-2 text-center flex items-center lg:gap-44 justify-between lg:justify-center">
+    <div className="text-white col-span-2 text-center flex items-center lg:gap-44 justify-center">
       {sale && date ? (
         <>
           <p className="font-bold text-3xl">{date}</p>
