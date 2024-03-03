@@ -9,6 +9,8 @@ export const HomePage: React.FC = React.memo(() => {
   const odnotonni5mm = getFilteredGoods(items.products, [114]);
   const odnotonni7mm = getFilteredGoods(items.products, [137]);
   const deko = getFilteredGoods(items.products, [119]);
+  const rulonyOdnotonni = getFilteredGoods(items.products, [380]);
+  const rulonyMixed = getFilteredGoods(items.products, [438]);
   const mixed = getFilteredGoods(items.products, [139, 128]);
   const marmur = getFilteredGoods(items.products, [1]);
   const kamin = getFilteredGoods(items.products, [142, 3]);
@@ -68,6 +70,22 @@ export const HomePage: React.FC = React.memo(() => {
       price: 119,
       sizes: ['700х700х5 мм'],
       items: deko,
+      sale: null,
+      date: null,
+    },
+    {
+      title: 'Рулони Однотонні',
+      price: 380,
+      sizes: ['700x3080x4 мм'],
+      items: rulonyOdnotonni,
+      sale: null,
+      date: null,
+    },
+    {
+      title: 'Рулони комбіновані',
+      price: 438,
+      sizes: ['700x3080x5 мм'],
+      items: rulonyMixed,
       sale: null,
       date: null,
     },
