@@ -17,6 +17,7 @@ export const HomePage: React.FC = React.memo(() => {
   const derevo = getFilteredGoods(items.products, [149, 141]);
   const steloviDekor = getFilteredGoods(items.products, [2]);
   const pvh = getFilteredGoods(items.products, [148]);
+  const lampy = getFilteredGoods(items.products, [823, 1099, 1298]);
   const plintusy = getFilteredGoods(items.products, [145]);
   const plivka = getFilteredGoods(items.products, [398, 598]);
   const dzerkala = getFilteredGoods(items.products, [89, 338]);
@@ -128,9 +129,17 @@ export const HomePage: React.FC = React.memo(() => {
     },
     {
       title: 'ПВХ ПАНЕЛІ',
-      price: 139,
+      price: 148,
       sizes: ['500х500х6 мм', '500х500х13 мм'],
       items: pvh,
+      sale: null,
+      date: null,
+    },
+    {
+      title: 'LED Лампи',
+      price: '823, 1099, 1298' as unknown as number,
+      sizes: ['23 см', '40 см', '60 см'],
+      items: lampy,
       sale: null,
       date: null,
     },
