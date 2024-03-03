@@ -59,7 +59,7 @@ export const HomePage: React.FC = React.memo(() => {
     },
     {
       title: 'Однотонні',
-      price: 119,
+      price: 114,
       sizes: ['700х700х7 мм'],
       items: odnotonni7mm,
       sale: 137,
