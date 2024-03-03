@@ -12,10 +12,11 @@ export const HomePage: React.FC = React.memo(() => {
   const mixed = getFilteredGoods(items.products, [139, 128]);
   const marmur = getFilteredGoods(items.products, [1]);
   const kamin = getFilteredGoods(items.products, [142, 3]);
-  const dekor = getFilteredGoods(items.products, [140, 143, 79]);
+  const dekor = getFilteredGoods(items.products, [140, 143]);
   const dekorSmall = getFilteredGoods(items.products, [79]);
   const derevo = getFilteredGoods(items.products, [149, 141]);
   const steloviDekor = getFilteredGoods(items.products, [2]);
+  const pvh = getFilteredGoods(items.products, [148]);
   const plintusy = getFilteredGoods(items.products, [145]);
   const plivka = getFilteredGoods(items.products, [398, 598]);
   const dzerkala = getFilteredGoods(items.products, [89, 338]);
@@ -104,7 +105,7 @@ export const HomePage: React.FC = React.memo(() => {
     {
       title: 'Декор',
       price: 79,
-      sizes: ['600х300'],
+      sizes: ['600х300 мм'],
       items: dekorSmall,
       sale: null,
       date: null,
@@ -122,6 +123,14 @@ export const HomePage: React.FC = React.memo(() => {
       price: 149,
       sizes: ['700х700'],
       items: steloviDekor,
+      sale: null,
+      date: null,
+    },
+    {
+      title: 'ПВХ ПАНЕЛІ',
+      price: 139,
+      sizes: ['500х500х6 мм', '500х500х13 мм'],
+      items: pvh,
       sale: null,
       date: null,
     },
