@@ -171,7 +171,7 @@ export const HomePage: React.FC = React.memo(() => {
       date: null,
     },
     {
-      title: 'Самоклеюча плівка / фольга',
+      title: 'Самоклеюча плівка на вікно',
       price: '421, 657' as unknown as number,
       sizes: ['0.6 * 3 м', '0.9 * 3 м'],
       items: termoPlivka,
