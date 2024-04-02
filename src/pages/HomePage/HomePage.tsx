@@ -22,6 +22,7 @@ export const HomePage: React.FC = React.memo(() => {
   const lampy = getFilteredGoods(items.products, [823, 1099, 1298]);
   const plintusy = getFilteredGoods(items.products, [145]);
   const plivka = getFilteredGoods(items.products, [398, 598]);
+  const termoPlivka = getFilteredGoods(items.products, [599]);
   const dzerkala = getFilteredGoods(items.products, [89, 338]);
 
   // console.log(
@@ -163,9 +164,17 @@ export const HomePage: React.FC = React.memo(() => {
     },
     {
       title: 'Самоклеюча плівка / фольга',
-      price: '398, 421, 598, 657' as unknown as number,
+      price: '398, 598' as unknown as number,
       sizes: ['0.6 * 10 м'],
       items: plivka,
+      sale: null,
+      date: null,
+    },
+    {
+      title: 'Самоклеюча плівка / фольга',
+      price: '421, 657' as unknown as number,
+      sizes: ['0.6 * 3 м', '0.9 * 3 м'],
+      items: termoPlivka,
       sale: null,
       date: null,
     },
