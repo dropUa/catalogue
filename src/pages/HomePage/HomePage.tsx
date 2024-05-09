@@ -44,35 +44,35 @@ export const HomePage: React.FC = React.memo(() => {
   const sections = [
     {
       title: 'Однотонні',
-      price: 98,
+      price: 84,
       sizes: ['700х700х4 мм'],
       items: odnotonni4mm,
       sale: 109,
-      date: 'До 01.04 включно',
+      date: null,
     },
     {
       title: 'Однотонні',
-      price: 103,
+      price: 89,
       sizes: ['700х700х5 мм'],
       items: odnotonni5mm,
       sale: 114,
-      date: 'До 01.04 включно',
+      date: null,
     },
     {
       title: 'Однотонні',
-      price: 114,
+      price: 99,
       sizes: ['700х700х7 мм'],
       items: odnotonni7mm,
       sale: 137,
-      date: 'До 01.04 включно',
+      date: null,
     },
     {
       title: 'Однотонні Деко',
-      price: 108,
+      price: 94,
       sizes: ['700х700х5 мм'],
       items: deko,
       sale: 119,
-      date: 'До 01.04 включно',
+      date: null,
     },
     {
       title: 'Рулони Однотонні',
@@ -112,7 +112,7 @@ export const HomePage: React.FC = React.memo(() => {
       sizes: ['700х700', '700х770'],
       items: kamin,
       sale: 142,
-      date: 'До 01.04 включно',
+      date: null,
     },
     {
       title: 'Декор',
@@ -120,7 +120,7 @@ export const HomePage: React.FC = React.memo(() => {
       sizes: ['700х770'],
       items: dekor,
       sale: 139,
-      date: 'До 01.04 включно',
+      date: null,
     },
     {
       title: 'Дерево',
@@ -128,7 +128,7 @@ export const HomePage: React.FC = React.memo(() => {
       sizes: ['700х700х5 мм', '700х700х8 мм'],
       items: derevo,
       sale: 149,
-      date: 'До 01.04 включно',
+      date: null,
     },
     {
       title: 'СТЕЛЬОВІ / ДЕКОР +',
@@ -136,7 +136,7 @@ export const HomePage: React.FC = React.memo(() => {
       sizes: ['700х700'],
       items: steloviDekor,
       sale: 149,
-      date: 'До 01.04 включно',
+      date: null,
     },
     {
       title: 'ПВХ ПАНЕЛІ',
@@ -144,7 +144,7 @@ export const HomePage: React.FC = React.memo(() => {
       sizes: ['500х500х6 мм', '500х500х13 мм'],
       items: pvh,
       sale: 148,
-      date: 'До 01.04 включно',
+      date: null,
     },
     {
       title: 'LED Лампи',
@@ -180,7 +180,7 @@ export const HomePage: React.FC = React.memo(() => {
     },
     {
       title: 'Настінна плитка',
-      price: '82' as unknown as number,
+      price: 79,
       sizes: ['600х300х3 мм'],
       items: dekorSmall,
       sale: null,
@@ -199,17 +199,34 @@ export const HomePage: React.FC = React.memo(() => {
   return sections.map((section, index) => {
     const { title, price, sizes, items, sale, date } = section;
 
-    return sale && date ? (
-      <Section
-        title={title}
-        price={price}
-        sizes={sizes}
-        items={items}
-        sale={sale}
-        date={date}
-        key={`${title}/${index}`}
-      />
-    ) : (
+    if (sale) {
+      return (
+        <Section
+          title={title}
+          price={price}
+          sizes={sizes}
+          items={items}
+          sale={sale}
+          key={`${title}/${index}`}
+        />
+      );
+    }
+
+    if (sale && date) {
+      return (
+        <Section
+          title={title}
+          price={price}
+          sizes={sizes}
+          items={items}
+          sale={sale}
+          date={date}
+          key={`${title}/${index}`}
+        />
+      );
+    }
+
+    return (
       <Section
         key={`${title}/${index}`}
         title={title}

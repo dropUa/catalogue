@@ -9,18 +9,27 @@ type Props = {
 export const Price: React.FC<Props> = React.memo(({ price, sale, date }) => {
   return (
     <div className="text-white col-span-2 text-center flex items-center lg:gap-44 justify-center">
-      {sale && date ? (
+      {sale && (
+        <>
+          <div className="flex justify-between bg-white items-center px-4">
+            <p className="text-gray-500 text-6xl line-through">{sale} грн</p>
+            <p className="text-red-600 font-bold text-8xl p-2">{price} грн</p>
+          </div>
+        </>
+      )}
+
+      {date && sale && (
         <>
           <p className="font-bold text-3xl">{date}</p>
 
           <div className="flex justify-between bg-white items-center px-4">
             <p className="text-gray-500 text-6xl line-through">{sale} грн</p>
-            <p className="text-red-600 font-bold text-8xl p-2">
-              {price} грн
-            </p>
+            <p className="text-red-600 font-bold text-8xl p-2">{price} грн</p>
           </div>
         </>
-      ) : (
+      )}
+
+      {!sale && !date && (
         <p className="w-fit bg-white text-red-600 font-bold text-4xl p-2 lg:text-6xl">
           {price} грн
         </p>
